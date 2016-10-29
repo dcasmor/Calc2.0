@@ -18,11 +18,12 @@
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:textAlignment="textEnd"
-        android:layout_alignRight="@+id/tableLayout"
-        android:layout_alignEnd="@+id/tableLayout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_height="30dp" />
+        android:layout_height="30dp"
+        tools:ignore="UnknownId"
+        android:layout_alignRight="@+id/input"
+        android:layout_alignEnd="@+id/input" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -32,16 +33,16 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:textAlignment="viewEnd"
         android:enabled="false"
-        android:layout_height="50dp" />
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/btnC"
+        android:layout_toLeftOf="@+id/btnC" />
 
     <TableLayout
         android:layout_height="match_parent"
         android:layout_below="@+id/input"
-        android:layout_width="325dp">
+        android:layout_width="match_parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -49,7 +50,7 @@
             android:layout_weight="1">
 
             <Button
-                android:text="7"
+                android:text="@string/b7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn7"
@@ -59,7 +60,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:text="8"
+                android:text="@string/b8"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn8"
@@ -69,7 +70,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:text="9"
+                android:text="@string/b9"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn9"
@@ -79,7 +80,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:text="/"
+                android:text="@string/bDiv"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnDiv"
@@ -87,6 +88,28 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="24sp" />
+
+            <Button
+                android:text="@string/bSin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnSin"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="@color/colorAccent"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnCE"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="@color/colorAccent"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:text="@string/bCE"
+                android:textSize="18sp"  />
 
         </TableRow>
 
@@ -96,7 +119,7 @@
             android:layout_weight="1">
 
             <Button
-                android:text="4"
+                android:text="@string/b4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn4"
@@ -106,7 +129,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:text="5"
+                android:text="@string/b5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn5"
@@ -116,7 +139,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:text="6"
+                android:text="@string/b6"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn6"
@@ -126,16 +149,36 @@
                 android:textSize="24sp" />
 
             <Button
-                android:text="X"
+                android:text="@string/bMult"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnMult"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_weight="1"
                 android:textAllCaps="false"
-                android:fontFamily="sans-serif-medium"
                 android:textSize="24sp"
                 android:textColor="@android:color/black" />
+
+            <Button
+                android:text="@string/bCos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnCos"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="@color/colorAccent"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnMR"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="@color/colorAccent"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:text="@string/bMR" />
         </TableRow>
 
         <TableRow
@@ -144,7 +187,7 @@
             android:layout_weight="1">
 
             <Button
-                android:text="1"
+                android:text="@string/b1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn1"
@@ -154,7 +197,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:text="2"
+                android:text="@string/b2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn2"
@@ -164,7 +207,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:text="3"
+                android:text="@string/b3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn3"
@@ -174,7 +217,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:text="-"
+                android:text="@string/bMinus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnMin"
@@ -182,8 +225,28 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="24sp"
-                android:textAlignment="center"
-                android:fontFamily="sans-serif-medium" />
+                android:textAlignment="center" />
+
+            <Button
+                android:text="@string/bTan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/brnTan"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="@color/colorAccent"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:text="@string/bMC"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnMC"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="@color/colorAccent"
+                android:layout_weight="1"
+                android:textSize="18sp" />
 
         </TableRow>
 
@@ -193,7 +256,7 @@
             android:layout_weight="1">
 
             <Button
-                android:text=","
+                android:text="@string/bComma"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnComma"
@@ -203,7 +266,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:text="0"
+                android:text="@string/b0"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn0"
@@ -213,17 +276,17 @@
                 android:textSize="24sp" />
 
             <Button
-                android:text="="
+                android:text="@string/bRes"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnRes"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
-                android:textSize="24sp" />
+                android:textSize="28sp" />
 
             <Button
-                android:text="+"
+                android:text="@string/bPlus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnPlus"
@@ -231,19 +294,41 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="24sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnSqr"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="@color/colorAccent"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnRms"
+                android:text="@string/bRms"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="@color/colorAccent"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textAllCaps="false" />
         </TableRow>
 
     </TableLayout>
 
-    <TableLayout
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
+    <Button
+        android:text="@string/bC"
+        android:id="@+id/btnC"
+        android:layout_width="109dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/input"
-        android:layout_width="325dp"
-        android:layout_toRightOf="@+id/tableLayout"
-        android:layout_toEndOf="@+id/tableLayout">
+        android:layout_height="59dp"
+        android:layout_marginTop="13dp"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:textSize="18sp" />
 
-    </TableLayout>
 </RelativeLayout>
