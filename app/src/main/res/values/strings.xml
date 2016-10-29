@@ -21,5 +21,8 @@
     <string name="bC">C</string>
     <string name="bCE">CE</string>
     <string name="bRes">=</string>
+    <string name="bSin">sin</string>
+    <string name="bCos">cos</string>
+    <string name="bTan">tan</string>
     <string name="bRms">\u221a</string>
 </resources>

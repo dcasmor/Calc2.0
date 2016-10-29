@@ -86,7 +86,6 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
-                android:foregroundTint="?attr/colorControlNormal"
                 android:foregroundGravity="center"
                 android:text="@string/bCE"
                 android:textSize="18sp" />
@@ -99,7 +98,7 @@
             android:layout_weight="1">
 
             <Button
-                android:text="sin"
+                android:text="@string/bSin"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnSin"
@@ -110,7 +109,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:text="cos"
+                android:text="@string/bCos"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnCos"
@@ -121,7 +120,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:text="tan"
+                android:text="@string/bTan"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/brnTan"
@@ -244,9 +243,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_weight="1"
                 android:textAllCaps="false"
-                android:fontFamily="sans-serif-medium"
-                android:textSize="18sp"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
         </TableRow>
 
         <TableRow
@@ -292,9 +290,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="24sp"
                 android:textAlignment="center"
-                android:fontFamily="sans-serif-medium" />
+                android:textSize="24sp" />
 
         </TableRow>
 
