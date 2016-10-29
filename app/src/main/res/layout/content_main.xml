@@ -50,7 +50,7 @@
             android:layout_weight="1">
 
             <Button
-                android:text="MC"
+                android:text="@string/bMC"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnMC"
@@ -60,17 +60,17 @@
                 android:textSize="18sp" />
 
             <Button
-                android:text="MR"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnMR"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:text="@string/bMR" />
 
             <Button
-                android:text="C"
+                android:text="@string/bC"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnC"
@@ -88,7 +88,7 @@
                 android:layout_weight="1"
                 android:foregroundTint="?attr/colorControlNormal"
                 android:foregroundGravity="center"
-                android:text="CE"
+                android:text="@string/bCE"
                 android:textSize="18sp" />
 
         </TableRow>
@@ -145,7 +145,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnRms"
-                android:text="@string/sqr"
+                android:text="@string/bRms"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
@@ -160,7 +160,7 @@
             android:layout_weight="1">
 
             <Button
-                android:text="7"
+                android:text="@string/b7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn7"
@@ -170,7 +170,7 @@
                 android:textSize="28sp" />
 
             <Button
-                android:text="8"
+                android:text="@string/b8"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn8"
@@ -180,7 +180,7 @@
                 android:textSize="28sp" />
 
             <Button
-                android:text="9"
+                android:text="@string/b9"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn9"
@@ -190,7 +190,7 @@
                 android:textSize="28sp" />
 
             <Button
-                android:text="/"
+                android:text="@string/bDiv"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnDiv"
@@ -207,7 +207,7 @@
             android:layout_weight="1">
 
             <Button
-                android:text="4"
+                android:text="@string/b4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn4"
@@ -217,7 +217,7 @@
                 android:textSize="28sp" />
 
             <Button
-                android:text="5"
+                android:text="@string/b5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn5"
@@ -227,7 +227,7 @@
                 android:textSize="28sp" />
 
             <Button
-                android:text="6"
+                android:text="@string/b6"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn6"
@@ -237,7 +237,7 @@
                 android:textSize="28sp" />
 
             <Button
-                android:text="X"
+                android:text="@string/bMult"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnMult"
@@ -255,7 +255,7 @@
             android:layout_weight="1">
 
             <Button
-                android:text="1"
+                android:text="@string/b1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn1"
@@ -265,7 +265,7 @@
                 android:textSize="28sp" />
 
             <Button
-                android:text="2"
+                android:text="@string/b2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn2"
@@ -275,7 +275,7 @@
                 android:textSize="28sp" />
 
             <Button
-                android:text="3"
+                android:text="@string/b3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn3"
@@ -285,7 +285,7 @@
                 android:textSize="28sp" />
 
             <Button
-                android:text="-"
+                android:text="@string/bMinus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnMin"
@@ -304,7 +304,7 @@
             android:layout_weight="1">
 
             <Button
-                android:text=","
+                android:text="@string/bComma"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnComma"
@@ -314,7 +314,7 @@
                 android:textSize="28sp" />
 
             <Button
-                android:text="0"
+                android:text="@string/b0"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btn0"
@@ -334,7 +334,7 @@
                 android:textSize="28sp" />
 
             <Button
-                android:text="+"
+                android:text="@string/bPlus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/btnPlus"

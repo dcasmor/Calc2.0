@@ -1,6 +1,24 @@
 <resources>
     <string name="app_name">Calc 2.0</string>
     <string name="action_settings">Acerca de</string>
-    <string name="typeSwitch">Científica</string>
-    <string name="sqr">\u221a</string>
+    <string name="b0">0</string>
+    <string name="b1">1</string>
+    <string name="b2">2</string>
+    <string name="b3">3</string>
+    <string name="b4">4</string>
+    <string name="b5">5</string>
+    <string name="b6">6</string>
+    <string name="b7">7</string>
+    <string name="b8">8</string>
+    <string name="b9">9</string>
+    <string name="bComma">,</string>
+    <string name="bPlus">+</string>
+    <string name="bMinus">-</string>
+    <string name="bMult">X</string>
+    <string name="bDiv">/</string>
+    <string name="bMC">MC</string>
+    <string name="bMR">MR</string>
+    <string name="bC">C</string>
+    <string name="bCE">CE</string>
+    <string name="bRms">\u221a</string>
 </resources>
