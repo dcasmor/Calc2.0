@@ -18,12 +18,15 @@
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:textAlignment="textEnd"
+        android:layout_gravity="end"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_height="30dp"
         tools:ignore="UnknownId"
         android:layout_alignRight="@+id/input"
-        android:layout_alignEnd="@+id/input" />
+        android:layout_alignEnd="@+id/input"
+        android:text="@string/input"
+        android:textSize="16sp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -34,10 +37,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textAlignment="viewEnd"
+        android:layout_gravity="end"
         android:enabled="false"
-        android:layout_height="wrap_content"
         android:layout_toStartOf="@+id/btnC"
-        android:layout_toLeftOf="@+id/btnC" />
+        android:layout_toLeftOf="@+id/btnC"
+        android:text="@string/input"
+        android:textSize="22sp"
+        android:layout_height="42dp" />
 
     <TableLayout
         android:layout_height="match_parent"
