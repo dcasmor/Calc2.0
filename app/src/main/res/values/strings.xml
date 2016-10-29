@@ -20,5 +20,6 @@
     <string name="bMR">MR</string>
     <string name="bC">C</string>
     <string name="bCE">CE</string>
+    <string name="bRes">=</string>
     <string name="bRms">\u221a</string>
 </resources>
