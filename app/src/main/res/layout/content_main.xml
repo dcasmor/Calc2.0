@@ -156,7 +156,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b8"
@@ -166,7 +167,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b9"
@@ -176,7 +178,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/bDiv"
@@ -203,7 +206,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b5"
@@ -213,7 +217,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b6"
@@ -223,7 +228,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/bMult"
@@ -250,7 +256,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b2"
@@ -260,7 +267,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b3"
@@ -270,7 +278,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/bMinus"
@@ -308,7 +317,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/bRes"
