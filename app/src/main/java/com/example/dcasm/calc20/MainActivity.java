@@ -40,6 +40,21 @@ public class MainActivity extends AppCompatActivity {
         hist.append(((Button)view).getText());
     }
 
+    protected void operador(View view) {
+        if (!opera) {
+            op1 = Double.parseDouble(input.getText().toString());
+            opera = true;
+        } else {
+            if (opera) {
+                operacion();
+            }
+        }
+    }
+
+    public void operacion() {
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
