@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn0, btn1, btn2,  btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnComma;
     Button btnSin, btnCos, btnTan, btnSqr, btnRms, btnMC, btnMR, btnC, btnCE;
     Button btnRes, btnPlus, btnMin, btnMult, btnDiv;
-    EditText input;
+    EditText input, tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +38,17 @@ public class MainActivity extends AppCompatActivity {
         btnComma = (Button) findViewById(R.id.btnComma);
         btnRes = (Button) findViewById(R.id.btnRes);
         btnPlus = (Button) findViewById(R.id.btnPlus);
+        btnMin = (Button) findViewById(R.id.btnMin);
+        btnMult = (Button) findViewById(R.id.btnMult);
+        btnDiv = (Button) findViewById(R.id.btnDiv);
         btnSin = (Button) findViewById(R.id.btnSin);
+        btnCos = (Button) findViewById(R.id.btnCos);
+        btnTan = (Button) findViewById(R.id.btnTan);
         btnSqr = (Button) findViewById(R.id.btnSqr);
+        btnMC = (Button) findViewById(R.id.btnMC);
+        btnMR = (Button) findViewById(R.id.btnMR);
+        btnC = (Button) findViewById(R.id.btnC);
+        btnCE = (Button) findViewById(R.id.btnCE);
         btnSqr.setText(Html.fromHtml("x<sup>2</sup>"));
         btnRms = (Button) findViewById(R.id.btnRms);
 
