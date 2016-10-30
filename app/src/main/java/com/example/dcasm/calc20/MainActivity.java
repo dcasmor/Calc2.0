@@ -22,9 +22,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        btnSqr = (Button) findViewById(R.id.btnSqr);
-        btnSqr.setText(Html.fromHtml("x<sup>2</sup>"));
-
         input = (EditText) findViewById(R.id.input);
         hist = (TextView) findViewById(R.id.tv1);
         op1 = 0;

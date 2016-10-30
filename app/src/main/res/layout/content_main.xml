@@ -24,7 +24,6 @@
         android:layout_height="40dp"
         android:textAlignment="textEnd"
         android:layout_gravity="end"
-        tools:text="@string/input"
         android:textSize="28sp"
         android:enabled="false" />
 
@@ -121,25 +120,14 @@
                 android:textAllCaps="false" />
 
             <Button
+                android:text="@string/bSig"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/btnSqr"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:textColor="@color/colorAccent"
+                android:id="@+id/btnSign"
                 android:layout_weight="1"
-                android:textSize="18sp"
-                android:textAllCaps="false" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:id="@+id/btnRms"
-                android:text="@string/bRms"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:textColor="@color/colorAccent"
-                android:layout_weight="1"
-                android:textSize="18sp"
-                android:textAllCaps="false" />
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
 
         </TableRow>
 
@@ -350,7 +338,6 @@
         android:ems="10"
         android:id="@+id/input"
         android:enabled="false"
-        android:text="@string/input"
         android:layout_below="@+id/tv1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"

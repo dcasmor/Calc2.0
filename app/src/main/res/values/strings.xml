@@ -25,5 +25,6 @@
     <string name="bCos">cos</string>
     <string name="bTan">tan</string>
     <string name="bRms">\u221a</string>
+    <string name="bSig">±</string>
     <string name="input">Entrada de texto</string>
 </resources>

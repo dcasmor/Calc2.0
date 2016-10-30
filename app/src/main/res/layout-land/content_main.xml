@@ -13,40 +13,6 @@
     tools:context="com.example.dcasm.calc20.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:id="@+id/tv1"
-        android:layout_alignParentTop="true"
-        android:textAlignment="textEnd"
-        android:layout_gravity="end"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_height="30dp"
-        tools:ignore="UnknownId"
-        android:layout_alignRight="@+id/input"
-        android:layout_alignEnd="@+id/input"
-        android:text="@string/input"
-        android:textSize="16sp"
-        android:enabled="false" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/input"
-        android:layout_below="@+id/tv1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textAlignment="viewEnd"
-        android:layout_gravity="end"
-        android:enabled="false"
-        android:layout_toStartOf="@+id/btnC"
-        android:text="@string/input"
-        android:textSize="21sp"
-        android:layout_height="42dp"
-        android:textColor="@android:color/black"
-        android:layout_toLeftOf="@+id/btnC" />
-
     <TableLayout
         android:layout_height="match_parent"
         android:layout_below="@+id/input"
@@ -59,37 +25,40 @@
 
             <Button
                 android:text="@string/b7"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/btn7"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b8"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/btn8"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b9"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/btn9"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/bDiv"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/btnDiv"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
@@ -99,7 +68,7 @@
 
             <Button
                 android:text="@string/bSin"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/btnSin"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
@@ -109,15 +78,13 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:id="@+id/btnCE"
+                android:text="@string/bC"
+                android:id="@+id/btnC"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:foregroundGravity="center"
-                android:text="@string/bCE"
-                android:textSize="16sp"  />
+                android:layout_width="match_parent" />
 
         </TableRow>
 
@@ -134,7 +101,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b5"
@@ -144,7 +112,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b6"
@@ -154,7 +123,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/bMult"
@@ -181,12 +151,14 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/btnMR"
+                android:id="@+id/btnCE"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
-                android:textSize="16sp"
-                android:text="@string/bMR" />
+                android:foregroundGravity="center"
+                android:text="@string/bCE"
+                android:textSize="16sp"  />
+
         </TableRow>
 
         <TableRow
@@ -202,7 +174,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b2"
@@ -212,7 +185,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/b3"
@@ -222,7 +196,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/bMinus"
@@ -247,14 +222,14 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:text="@string/bMC"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/btnMC"
+                android:id="@+id/btnMR"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:text="@string/bMR" />
 
         </TableRow>
 
@@ -281,7 +256,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="numero" />
 
             <Button
                 android:text="@string/bRes"
@@ -304,38 +280,55 @@
                 android:textSize="20sp" />
 
             <Button
+                android:text="@string/bSig"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/btnSqr"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:textColor="@color/colorAccent"
+                android:id="@+id/btnSign"
                 android:layout_weight="1"
-                android:textSize="16sp"
-                android:textAllCaps="false" />
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
 
             <Button
+                android:text="@string/bMC"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/btnRms"
-                android:text="@string/bRms"
+                android:id="@+id/btnMC"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
-                android:textSize="16sp"
-                android:textAllCaps="false" />
+                android:textSize="16sp" />
+
         </TableRow>
 
     </TableLayout>
 
-    <Button
-        android:text="@string/bC"
-        android:id="@+id/btnC"
-        android:layout_height="59dp"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tv1"
+        android:textAlignment="textEnd"
+        android:layout_gravity="end"
+        android:layout_height="30dp"
+        tools:ignore="UnknownId"
         android:textSize="16sp"
-        android:layout_width="108dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="14dp" />
+        android:enabled="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/input"
+        android:textAlignment="viewEnd"
+        android:layout_gravity="end"
+        android:enabled="false"
+        android:textSize="21sp"
+        android:layout_height="42dp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/tv1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
