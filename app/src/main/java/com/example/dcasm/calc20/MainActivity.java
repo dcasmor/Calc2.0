@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnSqr;
     EditText input;
     TextView hist;
+    char o;
     double op1, op2, mem;
     boolean opera, result;
 
@@ -46,13 +47,27 @@ public class MainActivity extends AppCompatActivity {
             opera = true;
         } else {
             if (opera) {
-                operacion();
+                op2 = Double.parseDouble(input.getText().toString());
+                operacion(op1, op2);
             }
         }
     }
 
-    public void operacion() {
-
+    public void operacion(double op1, double op2) {
+        switch (o) {
+            case 's':
+                input.setText("" + (op1 + op2));
+                break;
+            case 'r':
+                input.setText("" + (op1 - op2));
+                break;
+            case 'm':
+                input.setText("" + (op1 * op2));
+                break;
+            case 'd':
+                input.setText("" + (op1/op2));
+                break;
+        }
     }
 
     @Override
