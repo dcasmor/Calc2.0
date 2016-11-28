@@ -3,13 +3,11 @@ package com.example.dcasm.calc20;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.view.*;
 import android.widget.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnSqr;
     EditText input;
     TextView hist;
     char o;
@@ -53,6 +51,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    protected void masMenos(View view) {
+        char signo = input.getText().charAt(0);
+        String in = input.getText().toString();
+        String ou;
+        if (signo == '-') {
+            for (int i = 1; i <= input.getText().length(); i++) {
+
+            }
+        }
+        if (signo != '-')
+            input.setText("-" + in);
+    }
+
+
     public void operacion(double op1, double op2) {
         switch (o) {
             case 's':
@@ -68,6 +80,15 @@ public class MainActivity extends AppCompatActivity {
                 input.setText("" + (op1/op2));
                 break;
         }
+    }
+
+    public void memoria(View view) {
+        if (mem == 0) {
+            mem = Double.parseDouble(hist.getText().toString());
+            Toast toast = Toast.makeText(getApplicationContext(), "Memoria almacenada", Toast.LENGTH_LONG);
+        }
+        else
+            input.append(String.valueOf(mem));
     }
 
     @Override
