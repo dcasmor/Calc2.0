@@ -42,19 +42,19 @@ public class MainActivity extends AppCompatActivity {
 
     protected void pulsarMemoria(String mem) {
         switch (mem) {
-            case "bMc":
+            case "MC":
                 memoria = 0;
                 Toast.makeText(getApplicationContext(), "Memoria borrada", Toast.LENGTH_SHORT).show();
                 break;
-            case "bMr":
-                // Se cierra si tiene 8 o más digitos en memoria
+            case "MR":
                 if (memoria==0)
                     entrada.setText ("0");
+                else if (Integer.parseInt(String.valueOf(memoria).substring(String.valueOf(memoria)
+                        .indexOf(".") + 1)) == Integer.parseInt("0"))
+                    entrada.setText(String.valueOf(memoria).substring(0,String.valueOf(memoria)
+                            .indexOf(".")));
                 else
-                if (Integer.parseInt(String.valueOf(memoria).substring(String.valueOf(memoria).indexOf(".")+1))==Integer.parseInt("0"))
-                    entrada.setText(String.valueOf(memoria).substring(0,String.valueOf(memoria).indexOf(".")));
-                else
-                    entrada.setText("" + memoria);
+                    entrada.setText(String.valueOf(memoria));
                 break;
         }
     }
@@ -66,7 +66,12 @@ public class MainActivity extends AppCompatActivity {
                     calcularResultado();
                 break;
             case "C":
-                limpiar();
+                resultado = 0;
+                operador = "";
+                entrada.setText("0");
+                salida.setText("");
+                break;
+            case "CE":
                 entrada.setText("0");
                 break;
             default:
@@ -80,26 +85,28 @@ public class MainActivity extends AppCompatActivity {
 
     protected void calcularResultado() {
         switch (operador) {
-            case "+":   resultado+=Double.parseDouble(entrada.getText().toString()); break;
-            case "-":   resultado-=Double.parseDouble(entrada.getText().toString()); break;
-            case "*":   resultado*=Double.parseDouble(entrada.getText().toString()); break;
-            case "/":   resultado/=Double.parseDouble(entrada.getText().toString()); break;
+            case "+":
+                salida.setText(resultado + "+" + entrada.getText().toString());
+                resultado += Double.parseDouble(entrada.getText().toString());
+                break;
+            case "-":
+                salida.setText(resultado + "-" + entrada.getText().toString());
+                resultado -= Double.parseDouble(entrada.getText().toString());
+                break;
+            case "*":
+                salida.setText(resultado + "*" + entrada.getText().toString());
+                resultado *= Double.parseDouble(entrada.getText().toString());
+                break;
+            case "/":
+                salida.setText(resultado + "/" + entrada.getText().toString());
+                resultado /= Double.parseDouble(entrada.getText().toString());
+                break;
         }
-        // Error al dividir 9 entre 9.5
-        /*if (Integer.parseInt(String.valueOf(resultado).substring(String.valueOf(resultado).indexOf(".")+1))==Integer.parseInt("0"))
-            tfResultado.setText(String.valueOf(resultado).substring(0,String.valueOf(resultado).indexOf(".")));
-        else
-            tfResultado.setText("" + resultado);*/
-        salida.setText("" + resultado);
+        entrada.setText("" + resultado);
     }
 
     protected void cambiaSigno() {
 
-    }
-
-    public void limpiar() {
-        resultado = 0;
-        operador = "";
     }
 
     public void pulsar(View view) {
@@ -180,12 +187,23 @@ public class MainActivity extends AppCompatActivity {
 
             //Trigonometricas
             case R.id.btnSin:
-                entrada.setText("" + Math.sin(Double.parseDouble(entrada.getText().toString())));
+                try {
+                    salida.setText("sin(" + entrada.getText().toString() + ")");
+                    entrada.setText("" + Math.sin(Double.parseDouble(entrada.getText().toString())));
+                } catch (NumberFormatException nfe) {}
                 break;
             case R.id.btnCos:
-                entrada.setText("" + Math.cos(Double.parseDouble(entrada.getText().toString())));
+                try {
+                    salida.setText("cos(" + entrada.getText().toString() +")");
+                    entrada.setText("" + Math.cos(Double.parseDouble(entrada.getText().toString())));
+                } catch (NumberFormatException nfe) {}
                 break;
             case R.id.btnTan:
+                try {
+                    salida.setText("tan(" + entrada.getText().toString() + ")");
+                    entrada.setText(String.valueOf((Math.sin(Double.parseDouble(entrada.getText()
+                            .toString()))) / Math.cos(Double.parseDouble(entrada.getText().toString()))));
+                } catch (NumberFormatException nfe) {}
                 break;
         }
     }
@@ -194,16 +212,17 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putDouble("resultado", Double.parseDouble(entrada.getText().toString()));
         savedInstanceState.putString("operador", operador);
+        savedInstanceState.putString("salida", salida.getText().toString());
         savedInstanceState.putDouble("memoria", memoria);
     }
 
     protected void onRestoreInstanceState(Bundle savedInstanceState){
-        // Se cierra si tiene 8 o más digitos en pantalla
         super.onRestoreInstanceState(savedInstanceState);
         double res = savedInstanceState.getDouble("resultado");
         resultado = res;
         operador = savedInstanceState.getString("operador");
         memoria = savedInstanceState.getDouble("memoria");
+        salida.setText(savedInstanceState.getString("salida"));
         if (Integer.parseInt(String.valueOf(res).substring(String.valueOf(res).indexOf(".")+1))==Integer.parseInt("0"))
             entrada.setText(String.valueOf(res).substring(0, String.valueOf(res).indexOf(".")));
         else

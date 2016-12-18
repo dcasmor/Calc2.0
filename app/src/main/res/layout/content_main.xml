@@ -25,7 +25,10 @@
         android:textAlignment="textEnd"
         android:layout_gravity="end"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,7 +42,10 @@
         android:textAlignment="textEnd"
         android:layout_gravity="end"
         android:textSize="28sp"
-        android:enabled="false" />
+        android:enabled="false"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true" />
 
     <TableLayout
         android:layout_width="match_parent"
