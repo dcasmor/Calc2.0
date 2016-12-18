@@ -354,12 +354,11 @@
     </TableLayout>
 
     <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="75dp"
+        android:layout_width="60dp"
         android:id="@+id/tvOperador"
         android:layout_below="@+id/salida"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_height="75dp" />
 
 </RelativeLayout>
