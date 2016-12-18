@@ -25,9 +25,7 @@
         android:textAlignment="textEnd"
         android:layout_gravity="end"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/tvOperador"
-        android:layout_toStartOf="@+id/tvOperador" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
