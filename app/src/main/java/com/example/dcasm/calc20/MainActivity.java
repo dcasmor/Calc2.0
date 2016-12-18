@@ -3,16 +3,15 @@ package com.example.dcasm.calc20;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.*;
 import android.widget.*;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView entrada, salida, op;
-    char operacion;
-    double op1, op2, memoria;
-    boolean realizaOperacion, obtieneResultado;
+    String operador;
+    double resultado, memoria;
+    boolean coma;
     Button bResultado;
 
     @Override
@@ -26,108 +25,170 @@ public class MainActivity extends AppCompatActivity {
         salida = (TextView) findViewById(R.id.salida);
         op = (TextView) findViewById(R.id.tvOperador);
 
-        bResultado = (Button) findViewById(R.id.btnRes);
-        bResultado.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                operacion(op1, op2);
-            }
-        });
-
-        op1 = 0;
-        op2 = 0;
+        resultado = 0;
         memoria = 0;
-        operacion = 'n';
-        realizaOperacion = false;
-        obtieneResultado = false;
+        operador = "";
     }
 
-    //Introducción de números
-    public void entradaNumeros(View view) {
-        if (obtieneResultado) {
-            entrada.setText("");
-            salida.setText("");
-            obtieneResultado = false;
-        }
-        entrada.append(((Button)view).getText());
-        salida.append(((Button)view).getText());
-    }
-
-    //Se pulsa un operado
-    public void pulsaOperador(View view) {
-        if (!realizaOperacion) {
-            op1 = Double.parseDouble(entrada.getText().toString());
-            salida.setText(String.valueOf(op1));
-            entrada.setText("");
-            realizaOperacion = true;
-        } else {
-            op2 = Double.parseDouble(entrada.getText().toString());
-            operacion(op1, op2);
-        }
-    }
-
-    //Se pulsa el cambio de signo
-    public void masMenos(View view) {
-        char signo = entrada.getText().charAt(0);
-        String in = entrada.getText().toString();
-        if (signo != '-')
-            entrada.setText('-' + in);
-        else if (signo == '-') {
-            in = in.substring(1, in.length()-1);
-            entrada.setText(in);
-        }
-    }
-
-    //Se realiza la operacion
-    public void operacion(double op1, double op2) {
-        switch (operacion) {
-            case 's':
-                entrada.setText(String.valueOf(op1 + op2));
-                break;
-            case 'r':
-                entrada.setText(String.valueOf(op1 - op2));
-                break;
-            case 'm':
-                entrada.setText(String.valueOf(op1 * op2));
-                break;
-            case 'd':
-                entrada.setText(String.valueOf(op1/op2));
-                break;
-        }
-    }
-
-    public void trigonom(View view) {
-
-    }
-
-    //Gestión de la memoria
-    public void memoria(View view) {
-        Log.i("MEMORIA", String.valueOf(memoria));
-        if (memoria == 0) {
-            memoria = Double.parseDouble(salida.getText().toString());
-            Toast.makeText(getApplicationContext(), "Memoria almacenada", Toast.LENGTH_SHORT).show();
-        }
+    protected void pulsarNumero(String numero) {
+        if (entrada.getText().toString().equals("0"))
+            entrada.setText(numero);
         else
-            entrada.setText(String.valueOf(memoria));
+            entrada.setText(entrada.getText() + numero);
     }
 
-    public void borraMemoria(View view) {
-        memoria = 0;
-        Toast.makeText(this, "Memoria borrada", Toast.LENGTH_SHORT).show();
+    protected void pulsaComa() {
+        if (!entrada.getText().toString().contains("."))
+            entrada.append(".");
     }
 
-    public void limpiarTodo(View view) {
-        entrada.setText("");
-        salida.setText("");
-        op1 = 0;
-        op2 = 0;
-        operacion = 'n';
-        realizaOperacion = false;
-        obtieneResultado = false;
+    protected void pulsarMemoria(String mem) {
+        switch (mem) {
+            case "bMc":
+                memoria = 0;
+                Toast.makeText(getApplicationContext(), "Memoria borrada", Toast.LENGTH_SHORT).show();
+                break;
+            case "bMr":
+                // Se cierra si tiene 8 o más digitos en memoria
+                if (memoria==0)
+                    entrada.setText ("0");
+                else
+                if (Integer.parseInt(String.valueOf(memoria).substring(String.valueOf(memoria).indexOf(".")+1))==Integer.parseInt("0"))
+                    entrada.setText(String.valueOf(memoria).substring(0,String.valueOf(memoria).indexOf(".")));
+                else
+                    entrada.setText("" + memoria);
+                break;
+        }
     }
 
-    public void limpiaEntrada(View view) {
-        entrada.setText("");
+    protected void pulsarOperacion(String operacion) {
+        switch (operacion) {
+            case "=":
+                if (resultado!=0 && !operador.equals("") && !entrada.getText().toString().equals("0"))
+                    calcularResultado();
+                break;
+            case "C":
+                limpiar();
+                entrada.setText("0");
+                break;
+            default:
+                if (!entrada.getText().toString().equals("0")) {
+                    resultado = Double.parseDouble(entrada.getText().toString());
+                    operador = operacion;
+                    entrada.setText("0");
+                }
+        }
+    }
+
+    protected void calcularResultado() {
+        switch (operador) {
+            case "+":   resultado+=Double.parseDouble(entrada.getText().toString()); break;
+            case "-":   resultado-=Double.parseDouble(entrada.getText().toString()); break;
+            case "*":   resultado*=Double.parseDouble(entrada.getText().toString()); break;
+            case "/":   resultado/=Double.parseDouble(entrada.getText().toString()); break;
+        }
+        // Error al dividir 9 entre 9.5
+        /*if (Integer.parseInt(String.valueOf(resultado).substring(String.valueOf(resultado).indexOf(".")+1))==Integer.parseInt("0"))
+            tfResultado.setText(String.valueOf(resultado).substring(0,String.valueOf(resultado).indexOf(".")));
+        else
+            tfResultado.setText("" + resultado);*/
+        entrada.setText("" + resultado);
+    }
+
+    public void limpiar() {
+        resultado = 0;
+        operador = "";
+    }
+
+    public void pulsar(View view) {
+        switch (view.getId()) {
+            case R.id.btnMC:
+                pulsarMemoria("MC");
+                break;
+            case R.id.btnMR:
+                pulsarMemoria("MR");
+                break;
+            case R.id.btnC:
+                pulsarOperacion("C");
+                break;
+            case R.id.btnCE:
+                pulsarOperacion("CE");
+                break;
+            case R.id.btn1:
+                pulsarNumero("1");
+                break;
+            case R.id.btn2:
+                pulsarNumero("2");
+                break;
+            case R.id.btn3:
+                pulsarNumero("3");
+                break;
+            case R.id.btn4:
+                pulsarNumero("4");
+                break;
+            case R.id.btn5:
+                pulsarNumero("5");
+                break;
+            case R.id.btn6:
+                pulsarNumero("6");
+                break;
+            case R.id.btn7:
+                pulsarNumero("7");
+                break;
+            case R.id.btn8:
+                pulsarNumero("8");
+                break;
+            case R.id.btn9:
+                pulsarNumero("9");
+                break;
+            case R.id.btn0:
+                pulsarNumero("0");
+                break;
+            case R.id.btnPlus:
+                pulsarOperacion("+");
+                break;
+            case R.id.btnMin:
+                pulsarOperacion("-");
+                break;
+            case R.id.btnMult:
+                pulsarOperacion("*");
+                break;
+            case R.id.btnDiv:
+                pulsarOperacion("/");
+                break;
+            case R.id.btnComma:
+                pulsaComa();
+                break;
+            case R.id.btnRes:
+                pulsarOperacion("=");
+                break;
+            case R.id.btnSin:
+                entrada.setText("" + Math.sin(Double.parseDouble(entrada.getText().toString())));
+                break;
+            case R.id.btnCos:
+                entrada.setText("" + Math.cos(Double.parseDouble(entrada.getText().toString())));
+                break;
+        }
+    }
+
+    protected void onSaveInstanceState(Bundle savedInstanceState){
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putDouble("resultado", Double.parseDouble(entrada.getText().toString()));
+        savedInstanceState.putString("operador", operador);
+        savedInstanceState.putDouble("memoria", memoria);
+    }
+
+    protected void onRestoreInstanceState(Bundle savedInstanceState){
+        // Se cierra si tiene 8 o más digitos en pantalla
+        super.onRestoreInstanceState(savedInstanceState);
+        double res = savedInstanceState.getDouble("resultado");
+        resultado = res;
+        operador = savedInstanceState.getString("operador");
+        memoria = savedInstanceState.getDouble("memoria");
+        if (Integer.parseInt(String.valueOf(res).substring(String.valueOf(res).indexOf(".")+1))==Integer.parseInt("0"))
+            entrada.setText(String.valueOf(res).substring(0, String.valueOf(res).indexOf(".")));
+        else
+            entrada.setText("" + res);
     }
 
     @Override

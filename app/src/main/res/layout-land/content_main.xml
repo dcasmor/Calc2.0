@@ -31,7 +31,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/b8"
@@ -41,7 +42,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/b9"
@@ -51,7 +53,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bDiv"
@@ -61,7 +64,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bSin"
@@ -72,7 +76,8 @@
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bC"
@@ -81,7 +86,8 @@
                 android:textSize="16sp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_width="match_parent" />
+                android:layout_width="match_parent"
+                android:onClick="pulsar" />
 
         </TableRow>
 
@@ -98,7 +104,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/b5"
@@ -108,7 +115,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/b6"
@@ -118,7 +126,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bMult"
@@ -129,7 +138,8 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:textSize="16sp"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bCos"
@@ -140,7 +150,8 @@
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:onClick="pulsar" />
 
             <Button
                 android:layout_width="0dp"
@@ -151,7 +162,8 @@
                 android:layout_weight="1"
                 android:foregroundGravity="center"
                 android:text="@string/bCE"
-                android:textSize="16sp"  />
+                android:textSize="16sp"
+                android:onClick="pulsar" />
 
         </TableRow>
 
@@ -168,7 +180,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/b2"
@@ -178,7 +191,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/b3"
@@ -188,7 +202,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bMinus"
@@ -199,7 +214,8 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="24sp"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bTan"
@@ -210,7 +226,8 @@
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:onClick="pulsar" />
 
             <Button
                 android:layout_width="0dp"
@@ -220,7 +237,8 @@
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:text="@string/bMR" />
+                android:text="@string/bMR"
+                android:onClick="pulsar" />
 
         </TableRow>
 
@@ -237,7 +255,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/b0"
@@ -247,7 +266,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bRes"
@@ -257,7 +277,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bPlus"
@@ -267,7 +288,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bSig"
@@ -277,7 +299,8 @@
                 android:layout_weight="1"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bMC"
@@ -288,7 +311,7 @@
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:onClick="borraMemoria"/>
+                android:onClick="pulsar"/>
 
         </TableRow>
 
@@ -322,13 +345,5 @@
         android:layout_alignParentStart="true"
         android:layout_toStartOf="@+id/tvOperador"
         android:layout_toLeftOf="@+id/tvOperador" />
-
-    <TextView
-        android:layout_height="42dp"
-        android:layout_below="@+id/salida"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/tvOperador"
-        android:layout_width="60dp" />
 
 </RelativeLayout>

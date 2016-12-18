@@ -63,7 +63,7 @@
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:textSize="18sp"
-                android:onClick="borraMemoria"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:layout_width="0dp"
@@ -74,7 +74,7 @@
                 android:layout_weight="1"
                 android:textSize="18sp"
                 android:text="@string/bMR"
-                android:onClick="memoria" />
+                android:onClick="pulsar" />
 
             <Button
                 android:text="@string/bC"
@@ -85,7 +85,7 @@
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:textSize="18sp"
-                android:onClick="limpiarTodo"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:layout_width="0dp"
@@ -97,7 +97,7 @@
                 android:foregroundGravity="center"
                 android:text="@string/bCE"
                 android:textSize="18sp"
-                android:onClick="limpiaEntrada" />
+                android:onClick="pulsar" />
 
         </TableRow>
 
@@ -115,8 +115,7 @@
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:textSize="18sp"
-                android:textAllCaps="false"
-                android:onClick="trigonom"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/bCos"
@@ -127,8 +126,7 @@
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:textSize="18sp"
-                android:textAllCaps="false"
-                android:onClick="trigonom"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/bTan"
@@ -139,8 +137,7 @@
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:textSize="18sp"
-                android:textAllCaps="false"
-                android:onClick="trigonom"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/bSig"
@@ -151,7 +148,7 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
-                android:onClick="masMenos"/>
+                android:onClick="pulsar"/>
 
         </TableRow>
 
@@ -169,7 +166,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="entradaNumeros"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/b8"
@@ -180,7 +177,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="entradaNumeros"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/b9"
@@ -191,7 +188,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="entradaNumeros"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/bDiv"
@@ -202,7 +199,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="18sp"
-                android:onClick="pulsaOperador"/>
+                android:onClick="pulsar"/>
 
         </TableRow>
 
@@ -220,7 +217,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="entradaNumeros"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/b5"
@@ -231,7 +228,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="entradaNumeros"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/b6"
@@ -242,7 +239,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="entradaNumeros"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/bMult"
@@ -251,10 +248,9 @@
                 android:id="@+id/btnMult"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_weight="1"
-                android:textAllCaps="false"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
-                android:onClick="pulsaOperador"/>
+                android:onClick="pulsar"/>
 
         </TableRow>
 
@@ -272,7 +268,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="entradaNumeros"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/b2"
@@ -283,7 +279,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="entradaNumeros"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/b3"
@@ -294,7 +290,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="entradaNumeros"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/bMinus"
@@ -306,7 +302,7 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="24sp"
-                android:onClick="pulsaOperador"/>
+                android:onClick="pulsar"/>
 
         </TableRow>
 
@@ -324,7 +320,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="pulsaComa"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/b0"
@@ -335,7 +331,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="entradaNumeros"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/bRes"
@@ -346,7 +342,7 @@
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="operacion"/>
+                android:onClick="pulsar"/>
 
             <Button
                 android:text="@string/bPlus"
@@ -357,17 +353,9 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="24sp"
-                android:onClick="pulsaOperador"/>
+                android:onClick="pulsar"/>
         </TableRow>
 
     </TableLayout>
-
-    <TextView
-        android:layout_width="60dp"
-        android:id="@+id/tvOperador"
-        android:layout_below="@+id/salida"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_height="75dp" />
 
 </RelativeLayout>
