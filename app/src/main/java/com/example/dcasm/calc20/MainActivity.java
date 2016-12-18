@@ -8,11 +8,10 @@ import android.widget.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText input;
-    TextView hist;
-    char o;
-    double op1, op2, mem;
-    boolean opera, result;
+    TextView entrada, salida;
+    char operacion;
+    double op1, op2, memoria;
+    boolean realizaOperacion, obtieneResultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,74 +20,75 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        input = (EditText) findViewById(R.id.input);
-        hist = (TextView) findViewById(R.id.tv1);
+        entrada = (TextView) findViewById(R.id.entrada);
+        salida = (TextView) findViewById(R.id.salida);
         op1 = 0;
         op2 = 0;
-        mem = 0;
-        opera = false;
-        result = false;
+        memoria = 0;
+        realizaOperacion = false;
+        obtieneResultado = false;
     }
 
-    protected void numero(View view) {
-        if (result) {
-            input.setText("");
-            hist.setText("");
+    protected void entradaNumeros(View view) {
+        if (obtieneResultado) {
+            entrada.setText("");
+            salida.setText("");
+            obtieneResultado = false;
         }
-        input.append(((Button)view).getText());
-        hist.append(((Button)view).getText());
+        entrada.append(((Button)view).getText());
+        salida.append(((Button)view).getText());
     }
 
-    protected void operador(View view) {
-        if (!opera) {
-            op1 = Double.parseDouble(input.getText().toString());
-            opera = true;
+    protected void pulsaOperador(View view) {
+        if (!realizaOperacion) {
+            op1 = Double.parseDouble(entrada.getText().toString());
+            realizaOperacion = true;
         } else {
-            if (opera) {
-                op2 = Double.parseDouble(input.getText().toString());
+            if (realizaOperacion) {
+                op2 = Double.parseDouble(entrada.getText().toString());
                 operacion(op1, op2);
             }
         }
     }
 
     protected void masMenos(View view) {
-        char signo = input.getText().charAt(0);
-        String in = input.getText().toString();
+        char signo = entrada.getText().charAt(0);
+        String in = entrada.getText().toString();
         String ou;
         if (signo == '-') {
-            for (int i = 1; i <= input.getText().length(); i++) {
+            for (int i = 1; i <= entrada.getText().length(); i++) {
 
             }
         }
         if (signo != '-')
-            input.setText("-" + in);
+            entrada.setText("-" + in);
     }
 
 
     public void operacion(double op1, double op2) {
-        switch (o) {
+        switch (operacion) {
             case 's':
-                input.setText("" + (op1 + op2));
+                entrada.setText("" + (op1 + op2));
                 break;
             case 'r':
-                input.setText("" + (op1 - op2));
+                entrada.setText("" + (op1 - op2));
                 break;
             case 'm':
-                input.setText("" + (op1 * op2));
+                entrada.setText("" + (op1 * op2));
                 break;
             case 'd':
-                input.setText("" + (op1/op2));
+                entrada.setText("" + (op1/op2));
                 break;
         }
     }
 
     public void memoria(View view) {
-        if (mem == 0) {
-            mem = Double.parseDouble(hist.getText().toString());
+        if (memoria == 0) {
+            memoria = Double.parseDouble(salida.getText().toString());
             Toast toast = Toast.makeText(getApplicationContext(), "Memoria almacenada", Toast.LENGTH_LONG);
         }
         else
-            input.append(String.valueOf(mem));
+            entrada.append(String.valueOf(memoria));
     }
 
     @Override

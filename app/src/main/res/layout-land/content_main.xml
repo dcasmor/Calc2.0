@@ -15,7 +15,7 @@
 
     <TableLayout
         android:layout_height="match_parent"
-        android:layout_below="@+id/input"
+        android:layout_below="@+id/entrada"
         android:layout_width="match_parent">
 
         <TableRow
@@ -32,7 +32,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="22sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b8"
@@ -43,7 +43,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="22sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b9"
@@ -54,7 +54,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="22sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/bDiv"
@@ -102,7 +102,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="22sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b5"
@@ -113,7 +113,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="22sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b6"
@@ -124,7 +124,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="22sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/bMult"
@@ -175,7 +175,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="22sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b2"
@@ -186,7 +186,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="22sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b3"
@@ -197,7 +197,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="22sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/bMinus"
@@ -257,7 +257,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="22sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/bRes"
@@ -305,7 +305,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:id="@+id/tv1"
+        android:id="@+id/salida"
         android:textAlignment="textEnd"
         android:layout_gravity="end"
         android:layout_height="30dp"
@@ -320,14 +320,14 @@
         android:layout_width="match_parent"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/input"
+        android:id="@+id/entrada"
         android:textAlignment="viewEnd"
         android:layout_gravity="end"
         android:enabled="false"
         android:textSize="21sp"
         android:layout_height="42dp"
         android:textColor="@android:color/black"
-        android:layout_below="@+id/tv1"
+        android:layout_below="@+id/salida"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

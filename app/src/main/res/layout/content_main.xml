@@ -15,7 +15,7 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:id="@+id/tv1"
+        android:id="@+id/salida"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -30,7 +30,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/input"
+        android:layout_below="@+id/entrada"
         >
 
         <TableRow
@@ -146,7 +146,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b8"
@@ -157,7 +157,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b9"
@@ -168,7 +168,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/bDiv"
@@ -179,7 +179,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="18sp"
-                android:onClick="operador" />
+                android:onClick="pulsaOperador" />
 
         </TableRow>
 
@@ -197,7 +197,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b5"
@@ -208,7 +208,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b6"
@@ -219,7 +219,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/bMult"
@@ -231,7 +231,7 @@
                 android:textAllCaps="false"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
-                android:onClick="operador" />
+                android:onClick="pulsaOperador" />
         </TableRow>
 
         <TableRow
@@ -248,7 +248,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b2"
@@ -259,7 +259,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/b3"
@@ -270,7 +270,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/bMinus"
@@ -282,7 +282,7 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="24sp"
-                android:onClick="operador" />
+                android:onClick="pulsaOperador" />
 
         </TableRow>
 
@@ -300,7 +300,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="numero"/>
+                android:onClick="entradaNumeros"/>
 
             <Button
                 android:text="@string/b0"
@@ -311,7 +311,7 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="28sp"
-                android:onClick="numero" />
+                android:onClick="entradaNumeros" />
 
             <Button
                 android:text="@string/bRes"
@@ -332,25 +332,34 @@
                 android:textColor="@android:color/black"
                 android:layout_weight="1"
                 android:textSize="24sp"
-                android:onClick="operador" />
+                android:onClick="pulsaOperador" />
         </TableRow>
 
     </TableLayout>
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/input"
+        android:id="@+id/entrada"
         android:enabled="false"
-        android:layout_below="@+id/tv1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_below="@+id/salida"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:textSize="42sp"
         android:textColor="@android:color/black"
         android:textAlignment="textEnd"
-        android:layout_gravity="end"/>
+        android:layout_gravity="end"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_below="@+id/salida"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
