@@ -3,6 +3,7 @@ package com.example.dcasm.calc20;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.*;
 import android.widget.*;
 
@@ -89,12 +90,18 @@ public class MainActivity extends AppCompatActivity {
 
     //Gestión de la memoria
     public void memoria(View view) {
+        Log.i("MEMORIA", String.valueOf(memoria));
         if (memoria == 0) {
             memoria = Double.parseDouble(salida.getText().toString());
-            Toast toast = Toast.makeText(getApplicationContext(), "Memoria almacenada", Toast.LENGTH_LONG);
+            Toast.makeText(getApplicationContext(), "Memoria almacenada", Toast.LENGTH_SHORT).show();
         }
         else
-            entrada.append(String.valueOf(memoria));
+            entrada.setText(String.valueOf(memoria));
+    }
+
+    public void borraMemoria(View view) {
+        memoria = 0;
+        Toast.makeText(this, "Memoria borrada", Toast.LENGTH_SHORT).show();
     }
 
     @Override
