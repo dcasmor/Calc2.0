@@ -8,7 +8,7 @@ import android.widget.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView entrada, salida;
+    TextView entrada, salida, op;
     char operacion;
     double op1, op2, memoria;
     boolean realizaOperacion, obtieneResultado;
@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         entrada = (TextView) findViewById(R.id.entrada);
         salida = (TextView) findViewById(R.id.salida);
+        op = (TextView) findViewById(R.id.tvOperador);
+
         op1 = 0;
         op2 = 0;
         memoria = 0;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         obtieneResultado = false;
     }
 
+    //Introducción de números
     protected void entradaNumeros(View view) {
         if (obtieneResultado) {
             entrada.setText("");
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         salida.append(((Button)view).getText());
     }
 
+    //Se pulsa un operado
     protected void pulsaOperador(View view) {
         if (!realizaOperacion) {
             op1 = Double.parseDouble(entrada.getText().toString());
@@ -51,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Se pulsa el cambio de signo
     protected void masMenos(View view) {
         char signo = entrada.getText().charAt(0);
         String in = entrada.getText().toString();
@@ -64,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             entrada.setText("-" + in);
     }
 
-
+    //Se realiza la operacion
     public void operacion(double op1, double op2) {
         switch (operacion) {
             case 's':
@@ -82,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Gestión de la memoria
     public void memoria(View view) {
         if (memoria == 0) {
             memoria = Double.parseDouble(salida.getText().toString());
