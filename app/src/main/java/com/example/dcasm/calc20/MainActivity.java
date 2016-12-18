@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     char operacion;
     double op1, op2, memoria;
     boolean realizaOperacion, obtieneResultado;
+    Button bResultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,16 +26,24 @@ public class MainActivity extends AppCompatActivity {
         salida = (TextView) findViewById(R.id.salida);
         op = (TextView) findViewById(R.id.tvOperador);
 
+        bResultado = (Button) findViewById(R.id.btnRes);
+        bResultado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                operacion(op1, op2);
+            }
+        });
 
         op1 = 0;
         op2 = 0;
         memoria = 0;
+        operacion = 'n';
         realizaOperacion = false;
         obtieneResultado = false;
     }
 
     //Introducción de números
-    protected void entradaNumeros(View view) {
+    public void entradaNumeros(View view) {
         if (obtieneResultado) {
             entrada.setText("");
             salida.setText("");
@@ -45,48 +54,50 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Se pulsa un operado
-    protected void pulsaOperador(View view) {
+    public void pulsaOperador(View view) {
         if (!realizaOperacion) {
             op1 = Double.parseDouble(entrada.getText().toString());
+            salida.setText(String.valueOf(op1));
+            entrada.setText("");
             realizaOperacion = true;
         } else {
-            if (realizaOperacion) {
-                op2 = Double.parseDouble(entrada.getText().toString());
-                operacion(op1, op2);
-            }
+            op2 = Double.parseDouble(entrada.getText().toString());
+            operacion(op1, op2);
         }
     }
 
     //Se pulsa el cambio de signo
-    protected void masMenos(View view) {
+    public void masMenos(View view) {
         char signo = entrada.getText().charAt(0);
         String in = entrada.getText().toString();
-        String ou;
-        if (signo == '-') {
-            for (int i = 1; i <= entrada.getText().length(); i++) {
-
-            }
-        }
         if (signo != '-')
-            entrada.setText("-" + in);
+            entrada.setText('-' + in);
+        else if (signo == '-') {
+            in = in.substring(1, in.length()-1);
+            entrada.setText(in);
+        }
     }
 
     //Se realiza la operacion
     public void operacion(double op1, double op2) {
         switch (operacion) {
             case 's':
-                entrada.setText("" + (op1 + op2));
+                entrada.setText(String.valueOf(op1 + op2));
                 break;
             case 'r':
-                entrada.setText("" + (op1 - op2));
+                entrada.setText(String.valueOf(op1 - op2));
                 break;
             case 'm':
-                entrada.setText("" + (op1 * op2));
+                entrada.setText(String.valueOf(op1 * op2));
                 break;
             case 'd':
-                entrada.setText("" + (op1/op2));
+                entrada.setText(String.valueOf(op1/op2));
                 break;
         }
+    }
+
+    public void trigonom(View view) {
+
     }
 
     //Gestión de la memoria
@@ -105,13 +116,18 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Memoria borrada", Toast.LENGTH_SHORT).show();
     }
 
-    class Pulsa implements View.OnClickListener {
-        @Override
-        public void onClick(View v) {
-            int id = v.getId();
-            switch (id) {
-            }
-        }
+    public void limpiarTodo(View view) {
+        entrada.setText("");
+        salida.setText("");
+        op1 = 0;
+        op2 = 0;
+        operacion = 'n';
+        realizaOperacion = false;
+        obtieneResultado = false;
+    }
+
+    public void limpiaEntrada(View view) {
+        entrada.setText("");
     }
 
     @Override
