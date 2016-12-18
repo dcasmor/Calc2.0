@@ -8,11 +8,10 @@ import android.widget.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView entrada, salida, op;
+    TextView entrada, salida;
     String operador;
     double resultado, memoria;
     boolean coma;
-    Button bResultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         entrada = (TextView) findViewById(R.id.entrada);
         salida = (TextView) findViewById(R.id.salida);
-        op = (TextView) findViewById(R.id.tvOperador);
 
         resultado = 0;
         memoria = 0;
@@ -92,7 +90,11 @@ public class MainActivity extends AppCompatActivity {
             tfResultado.setText(String.valueOf(resultado).substring(0,String.valueOf(resultado).indexOf(".")));
         else
             tfResultado.setText("" + resultado);*/
-        entrada.setText("" + resultado);
+        salida.setText("" + resultado);
+    }
+
+    protected void cambiaSigno() {
+
     }
 
     public void limpiar() {
@@ -102,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void pulsar(View view) {
         switch (view.getId()) {
+
+            //Memoria y entrada
             case R.id.btnMC:
                 pulsarMemoria("MC");
                 break;
@@ -114,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnCE:
                 pulsarOperacion("CE");
                 break;
+
+            //Números
             case R.id.btn1:
                 pulsarNumero("1");
                 break;
@@ -144,6 +150,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn0:
                 pulsarNumero("0");
                 break;
+
+            //Operadores
             case R.id.btnPlus:
                 pulsarOperacion("+");
                 break;
@@ -156,17 +164,28 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnDiv:
                 pulsarOperacion("/");
                 break;
+
+            //Coma y cambio de signo
             case R.id.btnComma:
                 pulsaComa();
                 break;
+            case R.id.btnSign:
+                cambiaSigno();
+                break;
+
+            //Resultado
             case R.id.btnRes:
                 pulsarOperacion("=");
                 break;
+
+            //Trigonometricas
             case R.id.btnSin:
                 entrada.setText("" + Math.sin(Double.parseDouble(entrada.getText().toString())));
                 break;
             case R.id.btnCos:
                 entrada.setText("" + Math.cos(Double.parseDouble(entrada.getText().toString())));
+                break;
+            case R.id.btnTan:
                 break;
         }
     }
