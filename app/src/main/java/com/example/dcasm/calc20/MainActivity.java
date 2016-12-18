@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     TextView entrada, salida;
     String operador;
     double resultado, memoria;
-    boolean coma;
+    boolean memo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         resultado = 0;
         memoria = 0;
         operador = "";
+        memo = false;
     }
 
     protected void pulsarNumero(String numero) {
@@ -44,16 +45,20 @@ public class MainActivity extends AppCompatActivity {
         switch (mem) {
             case "MC":
                 memoria = 0;
+                memo = false;
                 Toast.makeText(getApplicationContext(), "Memoria borrada", Toast.LENGTH_SHORT).show();
                 break;
             case "MR":
-                if (memoria==0)
-                    entrada.setText ("0");
-                else if (Integer.parseInt(String.valueOf(memoria).substring(String.valueOf(memoria)
-                        .indexOf(".") + 1)) == Integer.parseInt("0"))
-                    entrada.setText(String.valueOf(memoria).substring(0,String.valueOf(memoria)
-                            .indexOf(".")));
-                else
+                if (!memo) {
+                    try {
+                        memoria = Double.parseDouble(entrada.getText().toString());
+                        memo = true;
+                    } catch (NumberFormatException nfe) {
+                        Toast.makeText(this, "Valor de memoria no válido", Toast.LENGTH_SHORT);
+                        memo = false;
+                    }
+                }
+                else if (memo)
                     entrada.setText(String.valueOf(memoria));
                 break;
         }
@@ -102,11 +107,14 @@ public class MainActivity extends AppCompatActivity {
                 resultado /= Double.parseDouble(entrada.getText().toString());
                 break;
         }
-        entrada.setText("" + resultado);
+        entrada.setText(String.valueOf(resultado));
     }
 
     protected void cambiaSigno() {
-
+        if (!entrada.getText().toString().contains("-")) {
+            entrada.setText("-" + entrada.getText().toString());
+        } else
+            entrada.setText(entrada.getText().toString().substring(1, entrada.getText().toString().length()));
     }
 
     public void pulsar(View view) {
@@ -229,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
             entrada.setText("" + res);
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -244,7 +252,5 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         return super.onOptionsItemSelected(item);
-    }
-
-
+    }*/
 }
