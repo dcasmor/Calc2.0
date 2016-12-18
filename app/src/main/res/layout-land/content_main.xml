@@ -287,7 +287,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="borraMemoria"/>
 
         </TableRow>
 

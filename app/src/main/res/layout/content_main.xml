@@ -62,7 +62,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:onClick="borraMemoria"/>
 
             <Button
                 android:layout_width="0dp"

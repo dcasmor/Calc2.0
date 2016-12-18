@@ -13,8 +13,6 @@ public class MainActivity extends AppCompatActivity {
     char operacion;
     double op1, op2, memoria;
     boolean realizaOperacion, obtieneResultado;
-    private Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, bMr, bMc, bC, bCe, bTan, bSin, bCos,
-            bSigno, bRes, bComa, bMas, bMenos, bMult, bDiv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,30 +25,6 @@ public class MainActivity extends AppCompatActivity {
         salida = (TextView) findViewById(R.id.salida);
         op = (TextView) findViewById(R.id.tvOperador);
 
-        b1 = (Button) findViewById (R.id.btn1);
-        b2 = (Button) findViewById (R.id.btn2);
-        b3 = (Button) findViewById (R.id.btn3);
-        b4 = (Button) findViewById (R.id.btn4);
-        b5 = (Button) findViewById (R.id.btn5);
-        b6 = (Button) findViewById (R.id.btn6);
-        b7 = (Button) findViewById (R.id.btn7);
-        b8 = (Button) findViewById (R.id.btn8);
-        b9 = (Button) findViewById (R.id.btn9);
-        b0 = (Button) findViewById (R.id.btn0);
-        bMr = (Button) findViewById(R.id.btnMR);
-        bMc = (Button) findViewById(R.id.btnMC);
-        bC = (Button) findViewById(R.id.btnC);
-        bCe = (Button) findViewById(R.id.btnCE);
-        bTan = (Button) findViewById(R.id.btnTan);
-        bCos = (Button) findViewById(R.id.btnCos);
-        bSin = (Button) findViewById(R.id.btnSin);
-        bSigno = (Button) findViewById(R.id.btnSign);
-        bRes = (Button) findViewById(R.id.btnRes);
-        bComa = (Button) findViewById(R.id.btnComma);
-        bMas = (Button) findViewById(R.id.btnPlus);
-        bMenos = (Button) findViewById(R.id.btnMin);
-        bMult = (Button) findViewById(R.id.btnMult);
-        bDiv = (Button) findViewById(R.id.btnDiv);
 
         op1 = 0;
         op2 = 0;
