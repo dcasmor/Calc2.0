@@ -15,6 +15,22 @@
 
     <TextView
         android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:ems="10"
+        android:id="@+id/entrada"
+        android:enabled="false"
+        android:layout_below="@+id/salida"
+        android:textSize="42sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="textEnd"
+        android:layout_gravity="end"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/tvOperador"
+        android:layout_toStartOf="@+id/tvOperador" />
+
+    <TextView
+        android:layout_width="wrap_content"
         android:id="@+id/salida"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -338,28 +354,12 @@
     </TableLayout>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="75dp"
-        android:ems="10"
-        android:id="@+id/entrada"
-        android:enabled="false"
-        android:layout_below="@+id/salida"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="42sp"
-        android:textColor="@android:color/black"
-        android:textAlignment="textEnd"
-        android:layout_gravity="end"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView" />
-
-    <TextView
         android:text="TextView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:layout_height="75dp"
+        android:id="@+id/tvOperador"
         android:layout_below="@+id/salida"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

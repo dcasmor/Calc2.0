@@ -316,9 +316,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
-        android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/entrada"
         android:textAlignment="viewEnd"
@@ -329,6 +328,18 @@
         android:textColor="@android:color/black"
         android:layout_below="@+id/salida"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/tvOperador"
+        android:layout_toLeftOf="@+id/tvOperador" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_below="@+id/salida"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/tvOperador"
+        android:layout_above="@+id/tableLayout" />
 
 </RelativeLayout>
